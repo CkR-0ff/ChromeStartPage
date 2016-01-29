@@ -279,11 +279,11 @@ function subItemHoverOut(id) {
 function searchInItem(e, searchString) {
 
   if (e.keyCode == 13 && e.shiftKey !== true) {
-    if (isZami(searchString)) {
-      searchString = searchString.replace("gregosReplaceString", UnicodeToWin1251(e.target.value));
-    }else{
+    //if (isZami(searchString)) {
+      //searchString = searchString.replace("gregosReplaceString", UnicodeToWin1251(e.target.value));
+    //}else{
       searchString = searchString.replace("gregosReplaceString", encodeURI(e.target.value));
-    }
+    //}
 
     var linkin = document.createElement("a");
     linkin.href = searchString;
