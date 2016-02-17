@@ -1,12 +1,12 @@
 var menuData = {
   tabs: {
     t1: {
-      tb_title: "Soc&Fun",
+      tb_title: "Soc&Media",
       items: {
         it_1: {
           it_title: "Facebook",
           it_backg: "Social-Network-Facebook-icon.png",
-          it_mainl: "www.facebook.com",
+          it_mainl: "http://www.facebook.com",
           it_subll: {
             l1: {
                 it_subl_title: "Profile",
@@ -58,6 +58,58 @@ var menuData = {
             }
           },
           it_searchStr: "https://www.youtube.com/results?search_query=gregosReplaceString"
+        },
+        it_4: {
+          it_title: "Geekologie",
+          it_backg: "geekologie.png",
+          it_mainl: "http://www.geekologie.com/",
+          it_subll: {
+            l1: {
+                it_subl_title: "Home",
+                it_subl_link: "http://www.geekologie.com/"
+            },
+            l2: {
+                it_subl_title: "Videos",
+                it_subl_link: "http://www.geekologie.com/videos/"
+            },
+            l3: {
+                it_subl_title: "VideoGames",
+                it_subl_link: "http://www.geekologie.com/video-games"
+            },
+            l4: {
+                it_subl_title: "Archive",
+                it_subl_link: "http://geekologie.com/archives.php"
+            }
+          },
+          it_searchStr: "http://geekologie.com/search.php?cx=partner-pub-1999638775863175%3A0402632565&cof=FORID%3A10&ie=ISO-8859-1&q=gregosReplaceString&sa=Search&siteurl=geekologie.com%2F&ref=&ss=552j156402j4"
+        },
+        it_5: {
+          it_title: "4chan",
+          it_backg: "4chan.png",
+          it_mainl: "http://www.4chan.org/",
+          it_subll: {
+            l1: {
+                it_subl_title: "/fit/",
+                it_subl_link: "http://boards.4chan.org/fit/"
+            },
+            l2: {
+                it_subl_title: "/wsg/",
+                it_subl_link: "http://boards.4chan.org/wsg/"
+            },
+            l3: {
+                it_subl_title: "/wg/",
+                it_subl_link: "http://boards.4chan.org/wg/"
+            },
+            l4: {
+                it_subl_title: "/diy/",
+                it_subl_link: "http://boards.4chan.org/diy/"
+            },
+            l5: {
+                it_subl_title: "/g/",
+                it_subl_link: "http://boards.4chan.org/g/"
+            }
+          },
+          it_searchStr: ""
         }
       }
     },
@@ -67,7 +119,7 @@ var menuData = {
         it_1: {
           it_title: "ThePirateBay",
           it_backg: "thepiratebay.png",
-          it_mainl: "www.thepiratebay.se",
+          it_mainl: "http://www.thepiratebay.se",
           it_subll: {
             l1: {
                 it_subl_title: "Audio",
@@ -183,7 +235,89 @@ var menuData = {
             }
           },
           it_searchStr: "http://arenabg.com/torrents/search:gregosReplaceString/time:"
+        },
+        it_5: {
+          it_title: "KickAss",
+          it_backg: "kats.png",
+          it_mainl: "https://kat.cr/",
+          it_subll: {
+            l1: {
+                it_subl_title: "Movies",
+                it_subl_link: "https://kat.cr/movies/"
+            },
+            l2: {
+                it_subl_title: "Series",
+                it_subl_link: "https://kat.cr/tv/"
+            },
+            l3: {
+                it_subl_title: "Games",
+                it_subl_link: "https://kat.cr/games/"
+            },
+            l5: {
+                it_subl_title: "Software",
+                it_subl_link: "https://kat.cr/applications/"
+            },
+            l7: {
+                it_subl_title: "Books",
+                it_subl_link: "https://kat.cr/books/"
+            },
+            l8: {
+                it_subl_title: "Porn",
+                it_subl_link: "https://kat.cr/xxx/"
+            }
+          },
+          it_searchStr: "https://kat.cr/usearch/gregosReplaceString/"
+        },
+        it_6: {
+          it_title: "ExtraTorrent",
+          it_backg: "extra-torrent.png",
+          it_mainl: "http://extratorrent.cc/",
+          it_subll: {
+            l1: {
+                it_subl_title: "Movies",
+                it_subl_link: "http://extratorrent.cc/category/4/"
+            },
+            l2: {
+                it_subl_title: "Series",
+                it_subl_link: "http://extratorrent.cc/category/8/"
+            },
+            l3: {
+                it_subl_title: "Games",
+                it_subl_link: "http://extratorrent.cc/category/3/"
+            },
+            l5: {
+                it_subl_title: "Software",
+                it_subl_link: "http://extratorrent.cc/category/7/"
+            },
+            l7: {
+                it_subl_title: "Books",
+                it_subl_link: "http://extratorrent.cc/category/2/"
+            },
+            l8: {
+                it_subl_title: "Porn",
+                it_subl_link: "http://extratorrent.cc/category/533/"
+            }
+          },
+          it_searchStr: "http://extratorrent.cc/search/?search=gregosReplaceString"
         }
+      }
+    },
+    t3: {
+      tb_title: "Sciense",
+      items: {
+
+      }
+    },
+    t4: {
+      tb_title: "Programming",
+      items: {
+
+      }
+    },
+    t5: {
+      tb_title: "Other",
+      items: {
+
       }
     }
   }
@@ -206,7 +340,7 @@ function menuCreate(menuDataObj) {
   downMenu.className = "menuDownSide";
   downMenu.style.height = (710 - Object.keys(menuDataObj.tabs).length*45) + "px";
   tabsDiv.appendChild(downMenu);
-
+  menuItemCreate('t1');
 }
 
 function menuItemCreate(tabID) {
@@ -277,22 +411,24 @@ function subItemHoverOut(id) {
 }
 
 function searchInItem(e, searchString) {
+  if (searchString) {
+    if (e.keyCode == 13 && e.shiftKey !== true) {
+      if (isZami(searchString)) {
+        searchString = searchString.replace("gregosReplaceString", escape(UnicodeToWin1251(e.target.value)));//za shibanata zamunda i tehniq Win-ski enkoding na parametri
+      }else{
+        searchString = searchString.replace("gregosReplaceString", encodeURI(e.target.value));
+      }
 
-  if (e.keyCode == 13 && e.shiftKey !== true) {
-    //if (isZami(searchString)) {
-      //searchString = searchString.replace("gregosReplaceString", UnicodeToWin1251(e.target.value));
-    //}else{
-      searchString = searchString.replace("gregosReplaceString", encodeURI(e.target.value));
-    //}
-
-    var linkin = document.createElement("a");
-    linkin.href = searchString;
-    linkin.click();
-    //window.open(searchString, "_self", true);
-    console.log(linkin);
-    e.preventDefault();
-    e.stopPropagation();
+      var linkin = document.createElement("a");
+      linkin.href = searchString;
+      linkin.click();
+      //window.open(searchString, "_self", true);
+      console.log(linkin);
+      e.preventDefault();
+      e.stopPropagation();
+    }
   }
+
 }
 
 function isZami(srchStr) {
@@ -308,8 +444,11 @@ function UnicodeToWin1251(s) {
     var L = []
     for (var i=0; i<s.length; i++) {
         var ord = s.charCodeAt(i)
-        if (!(ord in DMap))
-            throw "Character "+s.charAt(i)+" isn't supported by win1251!"
+        if (!(ord in DMap)){
+          console.log("Character "+s.charAt(i)+" isn't supported by win1251!");
+          throw "see log";
+        }
+
         L.push(String.fromCharCode(DMap[ord]))
     }
     return L.join('')
