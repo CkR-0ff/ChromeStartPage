@@ -338,7 +338,7 @@ function menuCreate(menuDataObj) {
   }
   var downMenu = document.createElement("div");
   downMenu.className = "menuDownSide";
-  downMenu.style.height = (710 - Object.keys(menuDataObj.tabs).length*45) + "px";
+  downMenu.style.height = (700 - Object.keys(menuDataObj.tabs).length*45) + "px";
   tabsDiv.appendChild(downMenu);
   menuItemCreate('t1');
 }
